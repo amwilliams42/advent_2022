@@ -5,6 +5,8 @@ use std::fs::File;
 mod day1;
 mod day2;
 mod day3;
+mod day4;
+mod day5;
 
 fn main() -> Result<(),Error>{
 
@@ -23,6 +25,17 @@ fn main() -> Result<(),Error>{
     }
     match day3::pack_values(File::open("./input/day3.txt")?, false) {
         Ok(p) => {println!("{:?}", p)}
+        Err(_) => {}
+    }
+    match day4::overlap(File::open("./input/day4.txt")?) {
+        Ok((o,d)) => {println!("Overlap:{:?}, Non-Disjoint {:?}", o,d)}
+        Err(_) => {}
+    }
+    match day5::CraneRun::new(File::open("./input/day5.txt")?) {
+        Ok(mut cr) => {
+            cr.run2();
+            println!("{:?}", cr.tops())
+        }
         Err(_) => {}
     }
     Ok(())
