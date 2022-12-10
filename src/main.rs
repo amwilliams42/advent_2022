@@ -56,7 +56,6 @@ fn main() -> Result<(),Error> {
             println!("Sum of under 100k: {:?}, Smallest Dir to Delete: {:?}", u, o)
         },
         8 => {
-
         }
         9 => {
             println!("Number of visited positions: {:?}", days::day9::simulate_bridge(file))
