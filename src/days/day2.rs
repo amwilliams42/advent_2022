@@ -1,8 +1,8 @@
 use std::error::Error;
 use std::io::{BufRead, BufReader, Read};
 use std::str::FromStr;
-use crate::day2::MyMove::{X, Y, Z};
-use crate::day2::OppMove::{A, B, C};
+use crate::days::day2::MyMove::{X, Y, Z};
+use crate::days::day2::OppMove::{A, B, C};
 
 pub struct Tournament {
     rounds: Vec<Round>
